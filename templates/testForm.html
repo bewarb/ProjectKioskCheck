@@ -2,15 +2,19 @@
 <html>
 <head>
     <title>Form Example</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Enter Data</h1>
-    <form method="POST" action="/submit">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email"><br><br>
-        <input type="submit" value="Submit">
-    </form>
+    <div class="center">
+        <h1>Enter Data Slay!</h1>
+        <form method="POST" action="/submit">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
 </body>
 </html>
