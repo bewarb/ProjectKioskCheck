@@ -10,15 +10,14 @@ def index():
 
 @app.route('/submit', methods=['POST'])
 def submit():
-    name = request.form.get('name')
-    email = request.form.get('email')
-
-    # Save the data to a CSV file
-    with open('data.csv', 'a', newline='') as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow([name, email])
+    passcode = request.form.get('passcode')
+    file = csv.reader(open("kioskers.csv"))
+    for name, password in file:
+        if passcode == password:
+            return "Correct Password. Hello " + name + "!"
 
     return 'Data submitted successfully.'
 
 if __name__ == '__main__':
     app.run()
+    
