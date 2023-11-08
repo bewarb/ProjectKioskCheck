@@ -22,9 +22,9 @@ def submit():
     file = csv.reader(open("kioskers.csv"))
     for name, password in file:
         if passcode == password:
-            return "Correct Password. Hello " + name + "!"
+            return render_template("formVbriana.html")
 
-    return 'Data submitted successfully.'
+    return "Submitted Correctly"
 
 
 if __name__ == '__main__':
