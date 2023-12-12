@@ -1,19 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Form Example</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
-    <div class="center">
-        <img src="../static/HLS3.png" id="logo" alt="harvard" width="300">
-        <h1>Enter Data Slay!</h1>
-        <form method="POST" action="/submit">
-            <label for="passcode">Passcode:</label>
-            <input type="text" id="passcode" name="passcode"><br><br>
+    <header class="title">
+        <h1>Kiosk Check Survey</h1>
+    </header>
+
+    <main>
+        <form action="#" method="post">
+            <ol>
+                <li>
+                    <label for="reamsUsed" class="number">How many reams of paper did you use?</label>
+                    <input type="number" id="reamsUsed" name="reamsUsed" step="0.25" required>
+                </li>
+                    <br>
+                <li>
+                    <label class="number">Are there any errors?</label>
+                    <div>
+                    <input type="radio" id="yes" name="errors" value="yes" required>
+                    <label for="yes">Yes</label>
+                    </div>
+                    <div>
+                    <input type="radio" id="no" name="errors" value="no" required>
+                    <label for="no">No</label>
+                    </div>
+                </li>
+
+                <li>
+                    <label for="satisfaction" class="number">How satisfied are you with the paper?</label>
+                    <select id="satisfaction" name="satisfaction" required>
+                    <option value="" disabled selected>Select satisfaction level</option>
+                    <option value="verySatisfied">Very Satisfied</option>
+                    <option value="satisfied">Satisfied</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="dissatisfied">Dissatisfied</option>
+                    <option value="veryDissatisfied">Very Dissatisfied</option>
+                    </select>
+                </li>
+            </ol>
+            <!-- <label for="reamsUsed" class="number">1. How many reams of paper did you use?</label>
+            <input type="number" id="reamsUsed" name="reamsUsed" step="0.25" required>
+            
+            <br>
+            
+            <label class="number">2. Are there any errors?</label>
+            <div>
+                <input type="radio" id="yes" name="errors" value="yes" required>
+                <label for="yes">Yes</label>
+            </div>
+            <div>
+                <input type="radio" id="no" name="errors" value="no" required>
+                <label for="no">No</label>
+            </div>
+            
+            <br>
+            
+            <label for="satisfaction" class="number">3. How satisfied are you with the paper?</label>
+            <select id="satisfaction" name="satisfaction" required>
+                <option value="" disabled selected>Select satisfaction level</option>
+                <option value="verySatisfied">Very Satisfied</option>
+                <option value="satisfied">Satisfied</option>
+                <option value="neutral">Neutral</option>
+                <option value="dissatisfied">Dissatisfied</option>
+                <option value="veryDissatisfied">Very Dissatisfied</option>
+            </select>
+
+            <br><br>
+            --->
             <input type="submit" value="Submit">
         </form>
-    </div>
-    
+    </main>
+
 </body>
 </html>
