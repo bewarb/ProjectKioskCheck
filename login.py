@@ -9,6 +9,10 @@ app.debug = True
 def index():
     return render_template('login.html')
 
+# @app.route('/form', methods=['POST'])
+# def form():
+#     return render_template('printer-page.html')
+
 @app.route('/submit', methods=['POST'])
 def submit():
     name = request.form.get('name')
@@ -21,10 +25,12 @@ def submit():
         writer.writerow([name, email, datetime.now().strftime('%m-%d-%Y %H:%M')[0:10], datetime.now().strftime('%m-%d-%Y %H:%M')[11:16]])
     file = csv.reader(open("kioskers.csv"))
     for name, password in file:
-        if password == user_passcode:
-            return render_template("printer-page.html")
+        if password != user_passcode:
+            # return render_template("printer-page.html")
+            # return printer_page()
+            return "Incorrect Password"
 
-    return "Incorrect Passcode"
+    # return "Incorrect Passcode"
 
 
 if __name__ == '__main__':
