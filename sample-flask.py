@@ -13,18 +13,18 @@ def index():
 def submit():
     name = request.form.get('name')
     email = request.form.get('email')
+    user_passcode = request.form.get('passcode')
 
     # Save the data to a CSV file
     with open('data.csv', 'a', newline='') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow([name, email, datetime.now().strftime('%m-%d-%Y %H:%M')[0:10], datetime.now().strftime('%m-%d-%Y %H:%M')[11:16]])
-    passcode = request.form.get('passcode')
     file = csv.reader(open("kioskers.csv"))
     for name, password in file:
-        if passcode == password:
+        if password == user_passcode:
             return render_template("printer-page.html")
 
-    return "Submitted Correctly"
+    return "Incorrect Passcode"
 
 
 if __name__ == '__main__':
