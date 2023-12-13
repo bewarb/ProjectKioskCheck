@@ -4,14 +4,32 @@
     text-align: center;
 }
 
+#submit {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+input {
+    margin: 0.4rem;
+}
+
+
+.check {
+    position: right;
+    /* position: left;
+    text-align: left; */
+}
+
 .number {
     text-align: left;
 }
 
 
 body {
-    position: center;
-    text-align: center;
+    /* position: center; */
+    /* text-align: center; */
     /* font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     display: flex;
@@ -34,3 +52,4 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
+
