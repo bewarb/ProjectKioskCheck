@@ -7,7 +7,7 @@ app.debug = True
 
 @app.route('/')
 def index():
-    return render_template('testForm.html')
+    return render_template('login.html')
 
 @app.route('/submit', methods=['POST'])
 def submit():
@@ -22,7 +22,7 @@ def submit():
     file = csv.reader(open("kioskers.csv"))
     for name, password in file:
         if passcode == password:
-            return render_template("formVbriana.html")
+            return render_template("printer-page.html")
 
     return "Submitted Correctly"
 
