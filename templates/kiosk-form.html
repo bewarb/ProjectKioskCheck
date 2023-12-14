@@ -6,13 +6,14 @@
     <title>Feedback Form</title>
     <link rel="stylesheet" href="../static/styles.css">
 </head>
+
 <body>
     <header class="title">
         <h1>Kiosk Check Survey</h1>
     </header>
 
     <main>
-        <form action="/submit2" method="POST">
+        <form action="/final-check" method="POST">
             <ol>
                 <li>
                     <label>Select a printer:</label>
@@ -41,37 +42,11 @@
                     <label>Select most pressing issue:</label>
                     <select name="issues" id="issues" required>
                         <option value="">--Please choose an option--</option>
+                        <option value="none">No issues</option>
                         <option value="misfeed">Paper misfeed</option>
                         <option value="call-service">Call service</option>
                         <option value="toner">Toner depleted</option>
                     </select>
-                    <!-- <label>Check off any errors:</label>
-                    <div>
-                        <input type="checkbox" id="misfeed" name="misfeed" /> <label for="misfeed">Misfeed</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" id="call" name="call" /> <label for="call">Call Service</label>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" id="toner" name="toner" /> <label for="toner">Toner Depleted</label>
-                    </div> -->
-
-
-                </li>
-                    <!-- <br>
-                <li>
-                    <label for="satisfaction" class="number">How satisfied are you with the paper?</label>
-                    <select id="satisfaction" name="satisfaction" required>
-                    <option value="" disabled selected>Select satisfaction level</option>
-                    <option value="verySatisfied">Very Satisfied</option>
-                    <option value="satisfied">Satisfied</option>
-                    <option value="neutral">Neutral</option>
-                    <option value="dissatisfied">Dissatisfied</option>
-                    <option value="veryDissatisfied">Very Dissatisfied</option>
-                    </select>
-                </li> -->
             </ol>
             <input id="submit" type="submit" value="Submit">
         </form>
