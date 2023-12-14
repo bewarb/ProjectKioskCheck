@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiosk Check</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .question {
+            margin: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kiosk Check</h1>
+        <div class="question">
+            <p>Was any equipment missing during the kiosk check?</p>
+        </div>
+        <form method="POST" action="/submit">
+            <input type="submit" id="button" name = "button" value="Yes">
+            <input type="submit" id="button" name = "button" value="No">
+            <br>
+            <img src="https://www.harvardonline.harvard.edu/sites/default/files/styles/retina/public/2022-01/HLS-Logo-440w.png.webp?itok=wespYZSz" alt="HLS">
+
+        </form>
+    </div>
+</body>
+</html>
