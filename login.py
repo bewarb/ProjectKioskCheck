@@ -44,7 +44,7 @@ def kiosk_form():
     
     name = request.form.get('name')
     email = request.form.get('email')
-    user_password = hash_password(request.form.get('passcode'))
+    user_password = hash_password(request.form.get('password'))
 
     # Save the data to a CSV file
     with open('data.csv', 'a', newline='') as csvfile:
