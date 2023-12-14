@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <header class="title">
+        <h1>Kiosk Check Survey</h1>
+    </header>
+
+    <main>
+        <form action="/submit2" method="POST">
+            <ol>
+                <li>
+                    <label>Select a printer:</label>
+                    <select name="printer" id="pritner" required>
+                        <option value="">--Please choose an option--</option>
+                        <option value="wcc-bf-lab-bw-1">WCC-BF-LAB-BW-1</option>
+                        <option value="wcc-bf-lab-c-1">WCC-BF-LAB-COLOR-1</option>
+                        <option value="wcc-2f-bw-1">WCC-2F-SOR-BW-1</option>
+                        <option value="wcc-2f-c-1">WCC-2F-SOR-COLOR-1</option>
+                        <option value="wcc-1f-hrk-bw-1">WCC-1F-HRK-BW-1</option>
+                        <option value="wcc-1f-hrk-bw-2">WCC-2F-HRK-BW-2</option>
+                        <option value="lan-2f-lob-bw-2">LAN-2F-LOB-BW-2</option>
+                        <option value="lan-2f-lob-c-1">LAN-2F-LOB-COLOR-1</option>
+                        <option value="lan-2f-221-bw-1">LAN-2F-221-BW-1</option>
+                        <option value="lan-3f-352-bw-1">LAN-3F-352-BW-1</option>
+                        <option value="lan-3f-353-bw-1">LAN-3F-353-BW-1</option>
+                    </select> 
+                </li>
+                <br>
+                <li>
+                    <label for="reamsUsed" class="number">How many reams of paper did you use?</label>
+                    <input type="number" id="reamsUsed" name="reamsUsed" step="0.25" min="0" max="4" required>
+                </li>
+                    <br>
+                <li>
+                    <label>Select most pressing issue:</label>
+                    <select name="issues" id="issues" required>
+                        <option value="">--Please choose an option--</option>
+                        <option value="misfeed">Paper misfeed</option>
+                        <option value="call-service">Call service</option>
+                        <option value="toner">Toner depleted</option>
+                    </select>
+                    <!-- <label>Check off any errors:</label>
+                    <div>
+                        <input type="checkbox" id="misfeed" name="misfeed" /> <label for="misfeed">Misfeed</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="call" name="call" /> <label for="call">Call Service</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="toner" name="toner" /> <label for="toner">Toner Depleted</label>
+                    </div> -->
+
+
+                </li>
+                    <!-- <br>
+                <li>
+                    <label for="satisfaction" class="number">How satisfied are you with the paper?</label>
+                    <select id="satisfaction" name="satisfaction" required>
+                    <option value="" disabled selected>Select satisfaction level</option>
+                    <option value="verySatisfied">Very Satisfied</option>
+                    <option value="satisfied">Satisfied</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="dissatisfied">Dissatisfied</option>
+                    <option value="veryDissatisfied">Very Dissatisfied</option>
+                    </select>
+                </li> -->
+            </ol>
+            <input id="submit" type="submit" value="Submit">
+        </form>
+    </main>
+
+</body>
+</html>
